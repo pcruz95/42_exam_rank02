@@ -7,15 +7,15 @@ int main(int ac, char **av){
     for(int i=0; i<256; ++i)
       arr[i] = 0;
     while(*av[1]){
-      if(!arr[*av[1]]){
-        arr[*av[1]] = 1;
+      if(!arr[(int)*av[1]]){
+        arr[(int)*av[1]] = 1;
         write(1, av[1], 1);
       }
       ++av[1];
     }
     while(*av[2]){
-      if(!arr[*av[2]]){
-        arr[*av[2]] = 1;
+      if(!arr[(int)*av[2]]){
+        arr[(int)*av[2]] = 1;
         write(1, av[2], 1);
       }
       ++av[2];
