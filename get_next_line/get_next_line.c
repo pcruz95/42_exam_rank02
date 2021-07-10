@@ -1,7 +1,6 @@
 #include "get_next_line.h"
 
-int get_next_line(char **line)
-{
+int get_next_line(char **line){
 	int i = 0;
 	int r;
 	char c;
@@ -9,8 +8,7 @@ int get_next_line(char **line)
 
 	if (!(buffer = (char *)malloc(10000)))
 		return (-1);
-	while ((r = read(0, &c, 1)) && c != '\n' && c != '\0')
-	{
+	while ((r = read(0, &c, 1)) && c != '\n' && c != '\0'){
 		if (c != '\n' && c != '\0')
 			buffer[i] = c;
 		i++;
